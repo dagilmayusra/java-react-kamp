@@ -9,11 +9,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController		//controller oldugunu soyluyor
-@RequestMapping("/api/products")		//adres uzerinden ıstek gelırse bu karsılar
+@RestController		
+@RequestMapping("/api/products")		
 public class ProductsController {
 	
-	//birden fazla service kullanıldıgı zamn autowired kullanılması gerek
 	private final ProductService productService;
 
     @Autowired
@@ -21,7 +20,7 @@ public class ProductsController {
         this.productService = productService;
     }
 
-	@GetMapping("/getall")	//istekte bulunduğu yeri çalıştırır
+	@GetMapping("/getall")	
 	 public DataResult<List<Product>> getAll(){
         return productService.getAll();
     }
