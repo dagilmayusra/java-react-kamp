@@ -9,13 +9,12 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service 		//bu classın servıce gorevı gorecegını soyler
+@Service 		
 public class ProductManager implements ProductService{
 
-	//productDao ve injextion
 	private ProductDao productDao;
 	
-	@Autowired		//productdaonun instance olabilecek bir tane sınıfı turetıp onu verır
+	@Autowired		
 	public ProductManager(ProductDao productDao){
         super();
         this.productDao = productDao;
