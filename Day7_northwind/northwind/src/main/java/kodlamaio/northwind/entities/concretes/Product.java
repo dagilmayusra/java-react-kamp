@@ -12,15 +12,15 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-@Data		//lombok butun get ve setlerı getırır
-@Entity		//product bir entity oldugunu belırtır.bir anatasyon..veritabanı nesnesı oldugunu soylerız
-@Table(name="products")    //veritabanında neye esıt oldugu verılır
+@Data		
+@Entity		
+@Table(name="products")   
 @AllArgsConstructor
 @NoArgsConstructor
 public class Product {
 	
-	@Id					//sorgular bu ıd ye gore yapılır
-	@GeneratedValue(strategy = GenerationType.IDENTITY) 	//id nin nasıl üretilecegini soyler
+	@Id					
+	@GeneratedValue(strategy = GenerationType.IDENTITY) 	
 	@Column(name="product_id")
     private int id;
 
