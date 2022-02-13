@@ -3,7 +3,7 @@ package kodlamaio.northwind.core.utilities.results;
 import lombok.Getter;
 
 @Getter
-public class Result {
+public class Result { //super type, soyut sınıf dıyebılırız
     private boolean success;
     private String message;
 
