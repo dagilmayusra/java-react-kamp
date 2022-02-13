@@ -12,20 +12,20 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-@Data		//lombok butun get ve setlerı getırır
+@Data		
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity		//product bir entity oldugunu belırtır.bir anatasyon..veritabanı nesnesı oldugunu soylerız
-@Table(name="products")    //veritabanında neye esıt oldugu verılır
+@Entity		
+@Table(name="products")   
 public class Product {
 	
-	@Id					//sorgular bu ıd ye gore yapılır
-	@GeneratedValue(strategy = GenerationType.IDENTITY) 	//id nin nasıl üretilecegini soyler
+	@Id					
+	@GeneratedValue(strategy = GenerationType.IDENTITY) 	
 	@Column(name="product_id")
     private int id;
 
-//    @Column(name="category_id")
-//    private int categoryId;
+    @Column(name="category_id")
+    private int categoryId;
 
     @Column(name="product_name")
     private String productName;
@@ -38,9 +38,6 @@ public class Product {
 
     @Column(name="quantity_per_unit")
     private String quantityPerUnit;
-    
-    @ManyToOne()
-    @JoinColumn(name="category_id")
-    private Category category;
+  
 
 }
