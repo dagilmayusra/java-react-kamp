@@ -18,11 +18,11 @@ public interface ProductDao extends JpaRepository<Product,Integer>{
 	List<Product> getByCategoryIdIn(List<Integer> categories);
 	//select * from products where category_id in(1,2,3,4)
 	
-	List<Product> getByProductNameContains(String productName); //arama yapıyor
+	List<Product> getByProductNameContains(String productName);
 	
-	List<Product> getByProductNameStartsWith(String productName); //bu isimle başlayanları getırecektır
+	List<Product> getByProductNameStartsWith(String productName);
 	
-	@Query("From Product where productName=:productName and categoryId=:categoryId")  //product burada entity, iki nokta veya soru işareti paremetre oldugunu ifade eder
+	@Query("From Product where productName=:productName and categoryId=:categoryId")  /
 	List<Product> getByNameAndCategory(String productName, int categoryId);
 	//select*from where product_name=bisey and categoryId=bisey
 }
